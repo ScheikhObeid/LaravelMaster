@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class BlogPost extends Model
 {
+    use HasFactory;
+
     protected $fillable =['title','content'];
     public function comments(){
         return $this->hasMany('App\Models\Comment');
